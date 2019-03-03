@@ -48,7 +48,7 @@ Route::group([
     // 删除优惠券
     $router->delete('coupon_codes/{id}', 'CouponCodesController@destroy');
 
-
+    // 类目相关
     $router->get('categories', 'CategoriesController@index');
     $router->get('categories/create', 'CategoriesController@create');
     $router->get('categories/{id}/edit', 'CategoriesController@edit');
@@ -56,5 +56,12 @@ Route::group([
     $router->put('categories/{id}', 'CategoriesController@update');
     $router->delete('categories/{id}', 'CategoriesController@destroy');
     $router->get('api/categories', 'CategoriesController@apiIndex');
+
+    // 众筹商品相关
+    $router->get('crowdfunding_products', 'CrowdfundingProductsController@index');
+    $router->get('crowdfunding_products/create', 'CrowdfundingProductsController@create');
+    $router->post('crowdfunding_products', 'CrowdfundingProductsController@store');
+    $router->get('crowdfunding_products/{id}/edit', 'CrowdfundingProductsController@edit');
+    $router->put('crowdfunding_products/{id}', 'CrowdfundingProductsController@update');
 
 });
