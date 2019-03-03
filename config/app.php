@@ -234,4 +234,6 @@ return [
     // 超时订单关闭
     'order_ttl' => 1800,
 
+    'ngrok_url' => env('NGROK_URL'),
+
 ];
