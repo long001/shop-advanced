@@ -89,6 +89,9 @@ Route::group(['middleware' => 'auth'], function() {
 
         // 优惠券查询
         Route::get('coupon_codes/{code}', 'CouponCodesController@show')->name('coupon_codes.show');
+
+        // 创建众筹订单
+        Route::post('crowdfunding_orders', 'OrdersController@crowdfunding')->name('crowdfunding_orders.store');
     });
 
 });
