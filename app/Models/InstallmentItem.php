@@ -3,6 +3,7 @@ namespace App\Models;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
+// use Moontoast\Math\BigNumber;
 
 class InstallmentItem extends Model
 {
@@ -31,6 +32,8 @@ class InstallmentItem extends Model
     ];
     protected $dates = ['due_date', 'paid_at'];
 
+    // protected $appends = ['total'];
+
     public function installment()
     {
         return $this->belongsTo(Installment::class);
@@ -51,7 +54,7 @@ class InstallmentItem extends Model
             $total->add($this->fine);
         }
 
-        return $total;
+        return $total->getValue();
     }
 
     // 创建一个访问器，返回当前还款计划是否已经逾期
