@@ -92,6 +92,9 @@ Route::group(['middleware' => 'auth'], function() {
 
         // 创建众筹订单
         Route::post('crowdfunding_orders', 'OrdersController@crowdfunding')->name('crowdfunding_orders.store');
+
+        // 创建分期付款单，分期还款计划
+        Route::post('payment/{order}/installment', 'PaymentController@payByInstallment')->name('payment.installment');
     });
 
 });
