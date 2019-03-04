@@ -55,24 +55,8 @@ class RefundInstallmentOrder implements ShouldQueue
                 continue;
             }
         }
-        // // 设定一个全部退款成功的标志位
-        // $allSuccess = true;
-        // // 再次遍历所有还款计划
-        // foreach ($installment->items as $item) {
-        //     // 如果该还款计划已经还款，但退款状态不是成功
-        //     if ($item->paid_at && 
-        //         $item->refund_status !== InstallmentItem::REFUND_STATUS_SUCCESS) {
-        //         // 则将标志位记为 false
-        //         $allSuccess = false;
-        //         break;
-        //     }
-        // }
-        // // 如果所有退款都成功，则将对应商品订单的退款状态修改为退款成功
-        // if ($allSuccess) {
-        //     $this->order->update([
-        //         'refund_status' => Order::REFUND_STATUS_SUCCESS,
-        //     ]);
-        // }
+
+        // \Log::info('---------------------------------');
         $installment->refreshRefundStatus();
     }
 

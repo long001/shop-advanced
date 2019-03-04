@@ -247,20 +247,7 @@ class InstallmentsController extends Controller
             $item->update([
                 'refund_status' => InstallmentItem::REFUND_STATUS_SUCCESS,
             ]);
-            // // 设定一个标志位
-            // $allSuccess = true;
-            // foreach ($item->installment->items as $item) {
-            //     if ($item->paid_at && $item->refund_status !== InstallmentItem::REFUND_STATUS_SUCCESS) {
-            //         $allSuccess = false;
-            //         break;
-            //     }
-            // }
-            // // 如果所有退款都成功，则将对应商品订单的退款状态修改为退款成功
-            // if ($allSuccess) {
-            //     $item->installment->order->update([
-            //         'refund_status' => Order::REFUND_STATUS_SUCCESS,
-            //     ]);
-            // }
+
             $item->installment->refreshRefundStatus();
         } else {
             // 否则将对应还款计划的退款状态改为退款失败
