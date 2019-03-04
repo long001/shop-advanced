@@ -101,6 +101,11 @@ Route::group(['middleware' => 'auth'], function() {
 
         // 分期付款详情
         Route::get('installments/{installment}', 'InstallmentsController@show')->name('installments.show');
+
+        // 拉起支付宝分期支付
+        Route::get('installments/{installment}/alipay', 'InstallmentsController@payByAlipay')->name('installments.alipay');
+        // 支付宝分期付款前端回调
+        Route::get('installments/alipay/return', 'InstallmentsController@alipayReturn')->name('installments.alipay.return');
     });
 
 });
@@ -123,3 +128,5 @@ Route::post('payment/alipay/notify', 'PaymentController@alipayNotify')->name('pa
 Route::post('payment/wechat/notify', 'PaymentController@wechatNotify')->name('payment.wechat.notify');
 // 微信退款回调
 Route::post('payment/wechat/refund_notify', 'PaymentController@wechatRefundNotify')->name('payment.wechat.refund_notify');
+// 支付宝分期付款后端回调
+Route::post('installments/alipay/notify', 'InstallmentsController@alipayNotify')->name('installments.alipay.notify');
