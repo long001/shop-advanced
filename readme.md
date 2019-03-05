@@ -98,3 +98,14 @@
 96. 通过 Elasticsearch API 创建索引；
 97. 使用 PHP 代码将数据库中的商品数据添加到 Elasticsearch 索引中；
 98. Elasticsearch 查询语法入门。
+
+99. 将搜索功能改用 Elasticsearch 构建；
+100. 分面搜索的概念；
+101. 使用 Elasticsearch 的聚合功能实现分面搜索；
+102. Elasticsearch 对象数据存储方式；
+103. Elasticsearch 分析器的概念；
+104. Elasticsearch 实现同义词搜索；
+105. 通过 Elasticsearch 的 should 条件实现相似商品的搜索；
+106. Elasticsearch 索引别名的概念；
+107. Elasticsearch 索引结构无缝迁移方案；
+108. 用 Laravel 实现Elasticsearch 索引结构无缝迁移。
