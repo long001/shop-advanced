@@ -89,3 +89,12 @@
 88. 使用定时任务计算逾期费用；
 89. 使用 chunkById() 减少内存占用；
 90. 使用异步任务实现多笔订单的退款。
+
+91. 商品增加商品属性；
+92. 商品增加长标题字段；
+93. Elasticsearch 的基础概念；
+94. Elasticsearch API 的调用；
+95. 在 Laravel 项目中使用 Elasticsearch；
+96. 通过 Elasticsearch API 创建索引；
+97. 使用 PHP 代码将数据库中的商品数据添加到 Elasticsearch 索引中；
+98. Elasticsearch 查询语法入门。
