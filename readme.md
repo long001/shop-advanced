@@ -109,3 +109,33 @@
 106. Elasticsearch 索引别名的概念；
 107. Elasticsearch 索引结构无缝迁移方案；
 108. 用 Laravel 实现Elasticsearch 索引结构无缝迁移。
+
+109. 在 Ubuntu 16.04 的服务器中手动安装 Laravel 项目的运行环境；
+110. 在 Ubuntu 18.04 的服务器中手动安装 Laravel 项目的运行环境；
+111. 手动部署代码的具体步骤；
+112. 使用 Deployer 执行部署脚本；
+113. 使用 Horizon 管理异步队列；
+114. 使用 Supervisor 管理 Horizon 进程；
+115. 多机部署时 Mysql、Redis、Elasticsearch 的配置；
+116. 使用阿里云 SLB 实现多机负载均衡。
+
+117. 使用阿里云数据盘，将mysql数据，应用程序放在数据盘上；
+
+当前架构：
+入口：SLB
+服务器A，包含程序代码，mysql，redis，session，elasticsearch，队列，定时任务
+服务器B，包含程序代码，共用A的 mysql，redis，session，elasticsearch 服务
+
+下一步改进：
+将 mysql，redis，session，elasticsearch，队列，定时任务 放置到单独的服务器上。 它们还可以再做SLB，以达到高负载，高可用。
+
+下一步改进：
+将 mysql 做主从，读写分离，分库分表
+
+下一步改进：
+
+将程序代码拆分成不同的服务，放置在不同的服务器上，以微服务的形式实现
+
+***
+SLB，也可以用 docker 实现
+微服务体系，也可以用 docker 实现
