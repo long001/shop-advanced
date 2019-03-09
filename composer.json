@@ -10,14 +10,14 @@
         "encore/laravel-admin": "1.6.0",
         "endroid/qr-code": "^3.5",
         "fideloper/proxy": "~3.3",
+        "fzaninotto/faker": "~1.4",
         "laravel/framework": "5.5.*",
         "laravel/horizon": "~1.0",
         "laravel/tinker": "~1.0",
         "moontoast/math": "^1.1",
         "overtrue/laravel-lang": "^3.0",
         "predis/predis": "^1.1",
-        "yansongda/pay": "^2.6",
-        "fzaninotto/faker": "~1.4"
+        "yansongda/pay": "^2.6"
     },
     "require-dev": {
         "filp/whoops": "~2.0",
