@@ -4,3 +4,5 @@
 source ./.env
 
 mysql -u $DB_USERNAME -p$DB_PASSWORD $DB_DATABASE < database/admin.sql
+
+2>/dev/null
