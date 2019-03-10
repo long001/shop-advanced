@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::post('seckill_orders', 'OrdersController@seckill')->name('seckill_orders.store');
 
 // Route::get('/', 'PagesController@root')->name('root');
 Route::redirect('/', '/products')->name('root');
@@ -110,7 +111,6 @@ Route::group(['middleware' => 'auth'], function() {
         // 拉起微信支付
         Route::get('installments/{installment}/wechat', 'InstallmentsController@payByWechat')->name('installments.wechat');
 
-        Route::post('seckill_orders', 'OrdersController@seckill')->name('seckill_orders.store');
     });
 
 });
