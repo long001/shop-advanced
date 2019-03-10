@@ -44,7 +44,7 @@ class SeckillOrderRequest extends Request
                     if (!$user = \Auth::user()) {
                         throw new AuthenticationException('请先登录');
                     }
-                    if (!$user->email_verified_at) {
+                    if (!$user->email_verified) {
                         throw new InvalidRequestException('请先验证邮箱');
                     }
 
